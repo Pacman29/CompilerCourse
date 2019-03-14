@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cc-lab1", "cc-lab1\cc-lab1.csproj", "{01013C2D-4BD8-4979-B21E-AE595D301263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCCLab1", "TestCCLab1\TestCCLab1.csproj", "{2373A11D-2A3F-4547-A2B6-59B6CF988ABA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01013C2D-4BD8-4979-B21E-AE595D301263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01013C2D-4BD8-4979-B21E-AE595D301263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01013C2D-4BD8-4979-B21E-AE595D301263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01013C2D-4BD8-4979-B21E-AE595D301263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2373A11D-2A3F-4547-A2B6-59B6CF988ABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2373A11D-2A3F-4547-A2B6-59B6CF988ABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2373A11D-2A3F-4547-A2B6-59B6CF988ABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2373A11D-2A3F-4547-A2B6-59B6CF988ABA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

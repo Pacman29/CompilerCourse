@@ -1,0 +1,27 @@
+{
+  "terminals" : [
+    "a", "b"
+  ],
+  "non_terminals": [
+    "S", "A", "B"
+  ],
+  "start": "S",
+  "rules": [
+    {
+      "left": "S",
+      "right": ["a"]
+    },
+    {
+      "left": "S",
+      "right": ["A"]
+    },
+    {
+      "left": "A",
+      "right": ["A","B"]
+    },
+    {
+      "left": "B",
+      "right": ["b"]
+    }
+  ]
+}

@@ -5,7 +5,7 @@
   "non_terminals": [
     "A", "S"
   ],
-  "start": "S",
+  "start": "A",
   "rules": [
     {
       "left": "A",

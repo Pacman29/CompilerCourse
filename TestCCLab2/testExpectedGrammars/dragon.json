@@ -1,0 +1,65 @@
+{
+  "terminals": [
+    "a",
+    "b",
+    "c",
+    "d"
+  ],
+  "non_terminals": [
+    "S",
+    "A",
+    "A'"
+  ],
+  "start": "S",
+  "rules": [
+    {
+      "right": [
+        "A",
+        "a"
+      ],
+      "left": "S"
+    },
+    {
+      "right": [
+        "b"
+      ],
+      "left": "S"
+    },
+    {
+      "right": [
+        "c",
+        "A'"
+      ],
+      "left": "A'"
+    },
+    {
+      "right": [
+        "a",
+        "d",
+        "A'"
+      ],
+      "left": "A'"
+    },
+    {
+      "right": [
+        "eps",
+        "A'"
+      ],
+      "left": "A"
+    },
+    {
+      "right": [
+        "b",
+        "d",
+        "A'"
+      ],
+      "left": "A"
+    },
+    {
+      "right": [
+        "eps"
+      ],
+      "left": "A'"
+    }
+  ]
+}

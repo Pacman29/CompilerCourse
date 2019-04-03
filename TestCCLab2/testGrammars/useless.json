@@ -1,26 +1,26 @@
 {
   "terminals" : [
-    "a", "b", "y"
+    "a", "b"
   ],
   "non_terminals": [
-    "A", "S"
+    "S", "A", "B"
   ],
   "start": "S",
   "rules": [
     {
+      "left": "S",
+      "right": ["a"]
+    },
+    {
+      "left": "S",
+      "right": ["A"]
+    },
+    {
       "left": "A",
-      "right": ["S","a"]
+      "right": ["A","B"]
     },
     {
-      "left": "S",
-      "right": ["S","b"]
-    },
-    {
-      "left": "S",
-      "right": ["A","y"]
-    },
-    {
-      "left": "S",
+      "left": "B",
       "right": ["b"]
     }
   ]

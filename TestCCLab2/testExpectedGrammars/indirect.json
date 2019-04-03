@@ -1,0 +1,50 @@
+{
+  "terminals": [
+    "a",
+    "b",
+    "y"
+  ],
+  "non_terminals": [
+    "A",
+    "S",
+    "S'"
+  ],
+  "start": "A",
+  "rules": [
+    {
+      "right": [
+        "S",
+        "a"
+      ],
+      "left": "A"
+    },
+    {
+      "right": [
+        "b",
+        "S'"
+      ],
+      "left": "S'"
+    },
+    {
+      "right": [
+        "a",
+        "y",
+        "S'"
+      ],
+      "left": "S'"
+    },
+    {
+      "right": [
+        "b",
+        "S'"
+      ],
+      "left": "S"
+    },
+    {
+      "right": [
+        "eps"
+      ],
+      "left": "S'"
+    }
+  ]
+}

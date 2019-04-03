@@ -39,6 +39,16 @@ namespace cc_lab2
 
             return gr;
         }
+        
+        public void CreateFile(String path)
+        {
+            using (StreamWriter w = File.CreateText(path))
+            {
+                var str = JsonConvert.SerializeObject(this, Formatting.Indented);
+                w.Write(str);
+                w.Flush();
+            }
+        }
 
         public override string ToString()
         {
@@ -64,6 +74,40 @@ namespace cc_lab2
                                               .Select(rule => String.Join(" ", rule.Right))) + "\n");
 
             return strBuilder.ToString();
+        }
+
+        protected bool Equals(Grammar other)
+        {
+            return Terminals.SequenceEqual(other.Terminals) 
+                   && NonTerminals.SequenceEqual(other.NonTerminals) 
+                   && string.Equals(Start, other.Start) 
+                   && Rules.SequenceEqual(other.Rules);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(null, obj)) return false;
+            if (ReferenceEquals(this, obj)) return true;
+            if (obj.GetType() != this.GetType()) return false;
+            return Equals((Grammar) obj);
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                var hashCode = (Terminals != null ? Terminals.Aggregate(new int(), (i, s) => { i += s.GetHashCode();
+                    return i;
+                }) : 0);
+                hashCode = (hashCode * 397) ^ (NonTerminals != null ? NonTerminals.Aggregate(new int(), (i, s) => { i += s.GetHashCode();
+                    return i;
+                }) : 0);
+                hashCode = (hashCode * 397) ^ (Start != null ? Start.GetHashCode() : 0);
+                hashCode = (hashCode * 397) ^ (Rules != null ? Rules.Aggregate(new int(), (i, s) => { i += s.GetHashCode();
+                    return i;
+                }) : 0);
+                return hashCode;
+            }
         }
     }
 }

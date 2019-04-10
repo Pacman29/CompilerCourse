@@ -57,7 +57,7 @@ namespace cc_lab2
                 
                 nonRecursionRules.ForEach(rule =>
                 {
-                    grammar.Rules.Remove(rule);
+                    //grammar.Rules.Remove(rule);
                     grammar.Rules.Add(new Rule
                     {
                         Left = nonTerm,
@@ -76,7 +76,7 @@ namespace cc_lab2
                     grammar.Rules.Add(new Rule
                     {
                         Left = newNonTerm,
-                        Right = new List<string> {Grammar.Eps}
+                        Right = rule.Right.Skip(1).ToList()
                     });
                 });
             }

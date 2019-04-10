@@ -72,6 +72,8 @@ namespace cc_lab2
                     strBuilder.Append(nonTerminal+" -> " + string.Join(" | ", 
                                           Rules.Where((rule => rule.Left.Equals(nonTerminal)))
                                               .Select(rule => String.Join(" ", rule.Right))) + "\n");
+            
+            strBuilder.Append($"Start:\n{this.Start}");
 
             return strBuilder.ToString();
         }
@@ -109,5 +111,18 @@ namespace cc_lab2
                 return hashCode;
             }
         }
+
+        public Grammar Copy()
+        {
+            return new Grammar()
+            {
+                NonTerminals = this.NonTerminals.ToHashSet(),
+                Rules = this.Rules.ToHashSet(),
+                Start = this.Start,
+                Terminals = this.Terminals.ToHashSet()
+            };
+        }
+        
+        
     }
 }

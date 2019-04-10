@@ -15,7 +15,7 @@ namespace cc_lab3
             LanguageUtils.RemoveEPS(ref grammar);
             Console.WriteLine(grammar.ToString());
             var parser = new LL1Parser(grammar);
-            Console.WriteLine(parser.ProcessText("a + b = ( b - c )"));
+            Console.WriteLine(parser.ProcessText("a + b cvcvx = ( b - c )"));
             parser.PrintTree(@"./tree.gv");
         }
     }

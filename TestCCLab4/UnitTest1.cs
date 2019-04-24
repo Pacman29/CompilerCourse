@@ -43,5 +43,12 @@ namespace TestCCLab4
             Assert.Throws<Exception>(() => SY.Execute(
                 " ( 3 + 4 ) )".Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(), null));
         }
+        
+        [Fact]
+        public void Test5()
+        {
+            Assert.Throws<Exception>(() => SY.Execute(
+                "{ ( 3 + 4 ) )".Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList(), null));
+        }
     }
 }

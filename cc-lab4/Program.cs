@@ -9,7 +9,7 @@ namespace cc_lab4
             static void Main(string[] args)
             {
                 var SY = new ShuntingYardSimpleMath();
-                var s = "( 3 + ( 4 * 2 ) ) * 2 / ( 6 - 5 )";
+                var s = "( 3 + 5 )";
                 Console.WriteLine($"input: {s}\n"); 
                 var ss = s.Split(' ').ToList();
                 SY.DebugRPNSteps += SY_DebugRPNSteps;

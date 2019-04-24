@@ -8,24 +8,21 @@ namespace cc_lab4
         {
             static void Main(string[] args)
             {
+                var SY = new ShuntingYardSimpleMath();
+                var s = "( 3 + ( 4 * 2 ) ) * 2 / ( 6 - 5 )";
+                Console.WriteLine($"input: {s}\n"); 
+                var ss = s.Split(' ').ToList();
+                SY.DebugRPNSteps += SY_DebugRPNSteps;
+                SY.DebugResSteps += SY_DebugResSteps;
+                try
+                { 
+                    var res = SY.Execute(ss, null);
+                    Console.WriteLine($"input: {s} = {res}");
+                }
+                catch (Exception ex)
                 {
-                    ShuntingYardSimpleMath SY = new ShuntingYardSimpleMath();
-                    String s = "( 3 + ( 4 * 2 ) ) * 2 / ( 6 - 5 )";
-                    Console.WriteLine("input: {0}", s); Console.WriteLine();
-                    List<String> ss = s.Split(' ').ToList();
-                    SY.DebugRPNSteps += SY_DebugRPNSteps;
-                    SY.DebugResSteps += SY_DebugResSteps;
-                    try
-                    { 
-                        Double res = SY.Execute(ss, null);
-                        Console.WriteLine("input: {0} = {1}", s, res);
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine("ERROR!!!");
-                        Console.WriteLine(ex.Message);
-                    }
-                    Console.ReadKey();
+                    Console.WriteLine("ERROR!!!");
+                    Console.WriteLine(ex.Message);
                 }
             }
     
